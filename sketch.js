@@ -24,8 +24,8 @@ function setup() {
 	dustbin = new Dustbin(650,650,100,20);
 	dustbin2 = new Dustbin(665,650,20,100);
 	dustbin3 = new Dustbin(645,650,20,100);
-    ground = new Ground(width/2,height-35,800,15);
-    paper = new Paper(300,650,5);
+  ground = new Ground(width/2,height-35,800,15);
+  paper = new Paper(200,630,5);
 	Engine.run(engine);
   
 }
@@ -35,17 +35,17 @@ function draw() {
   rectMode(CENTER);
   Engine.update(engine);
   background(0);
-  keyPressed();
-  drawSprites();
+  //keyPressed();
   dustbin.display();
   dustbin2.display();
   dustbin3.display();
   ground.display();
   paper.display();
+  drawSprites();
 }
  function keyPressed(){
 	 if(keyCode === UP_ARROW){
-		 Matter.Body.applyForce(Paper.body,Paper.body.position,{x=85,y=-85});
+		 Matter.Body.applyForce(paper.body,paper.body.position,{x:85,y:-85});
 	 }
  }
 

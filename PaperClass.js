@@ -16,7 +16,8 @@ class Paper {
      translate(pos.x,pos.y); 
      fill("white");
      stroke("green");
-     rect(0,0, this.width, this.height);
+     //rect(0,0, this.width, this.height);
+     ellipse(0,0,this.width);
      pop();
    }
 }
