@@ -17,7 +17,8 @@ class Paper {
      fill("white");
      stroke("green");
      //rect(0,0, this.width, this.height);
-     ellipse(0,0,this.width);
+     ellipseMode(RADIUS);
+     ellipse(0,0,this.radius,this.radius);
      pop();
    }
 }
